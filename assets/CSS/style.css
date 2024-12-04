@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myBlue: #2c3e50;
+    --myGreen: #1abc9c;
+    --myWhite: #ffffff;
+    --mainFont: "El Messiri";
+    --titleFontSize : 50px;
+}
+
+/* .montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+} */
+
+/* h1 {
+    font-family: var(--mainFont);
+    color: var(--myWhite);
+} */
+
+nav {
+    background-color: var(--myBlue);
+    color: var(--myWhite);
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 24px 10%;
+}
+
+nav .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav #menuItems {
+    width: 33%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--myWhite);
+}
+nav #menuButton button{
+    background-color: #1abc9c;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+}
+nav #menuButton button img{
+    width: 13px;
+    margin-left: 5px;
+    filter: invert(100%) sepia(100%) saturate(10%) hue-rotate(208deg) brightness(104%) contrast(104%);
+}
+nav #menuButton{
+    display: none;
+}
+@media only screen and (max-width: 991.88px) {
+    nav #menuItems {
+        display: none;
+        /* display: block; */
+        position: absolute;
+        left: 0; top: 88px;
+        width: 100%;
+        background-color: var(--myBlue);
+        padding-left: 10%;
+    }
+    nav #menuButton {
+        width: 20px;
+        display: block;
+    }
+  }
+
+/* ----------------------  banner ---------------------------- */
+
+#banner {
+    text-align: center;
+    background-color: var(--myGreen);
+    padding: 70px 0;
+}
+#banner > * {
+    margin-top: 25px;
+}
+#banner h1 {
+    margin: 25px 0;
+    color: var(--myWhite);
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family: var(--mainFont);
+}
+#bannerPhoto {
+    width: 240px;
+    display: inline-block;
+    /* margin: 0 auto; */
+}
+#banner .jobs{
+    color: #ffffff;
+    font-family: var(--mainFont);
+    font-size: 23px;
+    font-weight: 500;
+    margin: 25px 0;
+}
+
+
+/* -------------------------- portfolio --------------------- */
+
+#portfolio {
+    text-align: center;
+    background-color: var(--myWhite);
+    padding: 70px 0;
+}
+#portfolio h1 {
+    text-transform: uppercase;
+    color: var(--myBlue);
+    font-size: var(--titleFontSize);
+    font-family: var(--mainFont);
+    margin-bottom: 25px;
+}
+.portfolioCard {
+    width: 30%;
+    height: 40%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#porfolioGallery {
+    width: 90%;
+    height: 110vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+.portfolioCard > div {
+    text-align: center;
+    font-family: var(--mainFont);
+    color: var(--myWhite);
+    font-size: 100px;
+    font-weight: bold;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    width: 100%; height: 100%;
+    position: relative; top: 0; left: 0;
+    background-color: var(--myGreen);
+    opacity: 0;
+    transition: 0.3s all;
+}
+.portfolioCard > div:hover {
+    opacity: 0.75;
+    transition: 0.7s all;
+}
+/* ------------------ about ------------------- */
+#about{
+    background-color: #1abc9c;
+    width: 100%;
+    color: #ffffff;
+    padding: 70px 0;
+}
+.container{
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#about .container .row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: space-between;
+}
+#about .container .row p{
+    width: 48%;
+    padding: 30px 0px;
+    font-family: var(--mainFont);
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 28px;
+}
+#about .container .download{
+    background-color: transparent;
+    border-style:solid;
+    border-color: #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 15px 25px; 
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center; */
+    font-family: var(--mainFont);
+    font-size: 18px;
+    text-transform: capitalize;
+}
+#about .container .download img{
+    filter: invert(100%) sepia(100%) saturate(10%) hue-rotate(208deg) brightness(104%) contrast(104%);
+    width: 22px;
+    margin-right: 5px;
+}
+
+#about h1{
+    margin-bottom: 25px;
+    font-family: var(--mainFont);
+    text-transform: uppercase;
+    font-size: var(--titleFontSize);
+}
+.container-sta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+.container-sta .divider-line{
+    background-color: #ffffff;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+}
+.container-sta .sta-icon{
+    margin: 0 20px;
+    filter: invert(100%) sepia(100%) saturate(10%) hue-rotate(208deg) brightness(104%) contrast(104%);
+}
+.container-sta .sta-icon img{
+    width: 35px;
+}
+.container-sta .dark{
+    background-color: var(--myBlue);
+}
+.container-sta .dark-sta{
+    filter: invert(18%) sepia(9%) saturate(2365%) hue-rotate(169deg) brightness(99%) contrast(85%);
+}
+/* -------------contact--------------- */
+#contact{
+    width: 100%;
+    padding: 70px 0;
+}
+#contact h1{
+    text-transform: uppercase;
+    color: var(--myBlue);
+    font-size: var(--titleFontSize);
+    font-family: var(--mainFont);
+    margin-bottom: 25px;
+}
+#form-section{
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#form-section .form-container{
+    width: 60%;
+}
+#form-section .form-container .form-control{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    box-shadow: none; 
+    border-bottom-color: #6c757d !important;
+}
+#form-section .form-container button{
+    background-color: #1abc9c;
+    border-style: none;
+    padding: 15px 25px;
+    font-size: 20px;
+}
+#form-section .form-container label{
+    color: #6c757d;
+    font-size: 20px;
+}
+/* --------------------- footer ----------------------- */
+#fullSpace{
+    padding: 5rem;
+    width: 100%;
+    background-color: var(--myBlue);
+    display: flex;
+} 
+footer #container{
+    width: 100%;
+    padding: 0 50px;
+    margin:0 auto;
+}
+footer .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    color: #ffffff
+}
+footer .sosial a img{
+    filter: invert(100%) sepia(100%) saturate(10%) hue-rotate(208deg) brightness(104%) contrast(104%);
+    width: 50px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .about p a {
+    color: #1abc9c !important;
+    text-decoration: underline;
+}
+
+.svg-inline--fa.fa-fw {
+    width: 1.25em;
+}
+
+footer #space{
+    width: 33.33333%;
+}
+footer .footer{
+    margin-bottom: 30px;
+   
+    text-transform: uppercase;
+    font-family: var(--mainFont);
+    font-size: 25px;
+}
+
+footer p{
+    font-family: var(--mainFont);
+    font-size: 18px;
+    font-weight: 450;
+}
+footer .p{
+    line-height: 30px
+}
+.copyright {
+    background-color: #1a252f;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.copyright .container p{
+    font-family: var(--mainFont);
+    font-size: 14px;
+}
+
